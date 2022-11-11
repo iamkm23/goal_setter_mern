@@ -8,6 +8,8 @@ const {
   deleteGoal,
 } = require("../controllers/goalsController");
 
+const authentication = require('../middleware/authMiddleware')
+
 router.route("/").get(getGoals).post(setGoal);
 router.route("/:id").patch(updateGoal).delete(deleteGoal);
 
